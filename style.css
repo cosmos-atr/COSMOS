@@ -34,33 +34,21 @@ body {
     z-index: 100;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo-gradient {
-    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: 3px;
-}
-
 /* Hero Section */
 .hero {
     height: 80vh;
     display: flex;
     align-items: center;
+    justify-content: center; /* Центрируем контент */
     position: relative;
     margin-bottom: 100px;
+    text-align: center; /* Центрируем текст */
 }
 
 .hero-content {
     flex: 1;
     z-index: 2;
+    max-width: 800px; /* Ограничиваем ширину для лучшего чтения */
 }
 
 .hero-title {
@@ -74,40 +62,25 @@ body {
     display: block;
 }
 
-.logo-main {
+/* Увеличенная надпись COSMOS */
+.logo-main.large {
     background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
     display: block;
-    margin-top: 10px;
+    margin-top: 20px;
+    font-size: clamp(3rem, 8vw, 6rem); /* Увеличиваем размер */
+    letter-spacing: 4px; /* Добавляем больше пространства между буквами */
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.3rem; /* Немного увеличили подзаголовок */
     color: #ccc;
-    max-width: 500px;
+    max-width: 600px;
     line-height: 1.6;
-}
-
-.hero-mirror {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 400px;
-    height: 400px;
-    background: linear-gradient(45deg, 
-        rgba(74, 0, 224, 0.1), 
-        rgba(142, 45, 226, 0.1));
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 
-        0 8px 32px rgba(0, 0, 0, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    margin: 0 auto; /* Центрируем подзаголовок */
 }
 
 /* Mirror Cards */
@@ -171,17 +144,7 @@ body {
 @media (max-width: 768px) {
     .hero {
         height: auto;
-        flex-direction: column;
-        text-align: center;
-        padding: 50px 0;
-    }
-    
-    .hero-mirror {
-        position: relative;
-        width: 300px;
-        height: 300px;
-        margin-top: 40px;
-        transform: none;
+        padding: 80px 0; /* Увеличили отступы для мобильных */
     }
     
     .mirror-card {
@@ -190,5 +153,9 @@ body {
     
     .mirror-card.large {
         padding: 40px 25px;
+    }
+    
+    .logo-main.large {
+        font-size: clamp(2.5rem, 10vw, 4rem); /* Адаптивный размер для мобильных */
     }
     }
