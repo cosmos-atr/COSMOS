@@ -1,18 +1,26 @@
-// Убраны эффекты курсора и двигающегося зеркала
-// Оставлены только плавные анимации карточек
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Add subtle animation to cards on load
-    const mirrorCards = document.querySelectorAll('.mirror-card');
+    const mirrorCard = document.querySelector('.mirror-card');
     
-    mirrorCards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
+    setTimeout(() => {
+        mirrorCard.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        mirrorCard.style.opacity = '1';
+        mirrorCard.style.transform = 'translateY(0)';
+        
+        const cardTitle = mirrorCard.querySelector('h2');
+        const cardParagraphs = mirrorCard.querySelectorAll('p');
         
         setTimeout(() => {
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-        }, index * 200);
-    });
+            cardTitle.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            cardTitle.style.opacity = '1';
+            cardTitle.style.transform = 'translateX(0)';
+        }, 300);
+        
+        cardParagraphs.forEach((p, index) => {
+            setTimeout(() => {
+                p.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                p.style.opacity = '1';
+                p.style.transform = 'translateX(0)';
+            }, 500 + (index * 200));
+        });
+    }, 1200);
 });
