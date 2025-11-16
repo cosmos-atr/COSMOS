@@ -63,21 +63,6 @@ body {
     opacity: 1;
 }
 
-.nav-button {
-    padding: 8px 18px;
-    border-radius: 10px;
-    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.nav-button:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
-}
-
 /* ---------- Hero ---------- */
 
 .header {
@@ -91,9 +76,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    margin-bottom: 100px;
     text-align: center;
+    margin-bottom: 100px;
 }
 
 .hero-content {
@@ -116,13 +100,8 @@ body {
     animation: fadeInUp 0.8s ease forwards;
 }
 
-.title-line:nth-child(2) {
-    animation-delay: 0.3s;
-}
-
-.title-line:nth-child(3) {
-    animation-delay: 0.6s;
-}
+.title-line:nth-child(2) { animation-delay: 0.3s; }
+.title-line:nth-child(3) { animation-delay: 0.6s; }
 
 .logo-main.large {
     background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
@@ -159,61 +138,23 @@ body {
     border-radius: 20px;
     padding: 40px;
     margin-bottom: 50px;
-    box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    position: relative;
-    overflow: hidden;
-    opacity: 0;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
     transform: translateY(50px);
+    opacity: 0;
 }
 
-.mirror-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.1),
-        transparent
-    );
-    transition: left 0.6s;
-}
-
-.mirror-card:hover::before {
-    left: 100%;
+/* текст всегда видим */
+.mirror-card h2,
+.mirror-card p {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .mirror-card.large {
     padding: 60px;
 }
 
-.mirror-card h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    font-weight: 300;
-    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 0;
-    transform: translateX(-30px);
-}
-
-.mirror-card p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: #e0e0e0;
-    opacity: 0;
-    transform: translateX(-20px);
-}
-
-/* ---------- Анимации ---------- */
+/* ---------- Animations ---------- */
 
 @keyframes fadeInUp {
     to {
@@ -230,25 +171,5 @@ body {
 }
 
 @media (max-width: 768px) {
-    .hero {
-        height: auto;
-        padding: 80px 0;
-    }
-
-    .mirror-card {
-        padding: 30px 20px;
-    }
-
-    .mirror-card.large {
-        padding: 40px 25px;
-    }
-
-    .logo-main.large {
-        font-size: clamp(2.5rem, 10vw, 4rem);
-    }
-
-    .nav-links {
-        display: none;
-    }
+    .nav-links { display: none; }
 }
-
