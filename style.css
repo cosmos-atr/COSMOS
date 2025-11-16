@@ -27,28 +27,26 @@ body {
     padding: 0 20px;
 }
 
-/* Header */
 .header {
     padding: 30px 0;
     position: relative;
     z-index: 100;
 }
 
-/* Hero Section */
 .hero {
     height: 80vh;
     display: flex;
     align-items: center;
-    justify-content: center; /* Центрируем контент */
+    justify-content: center;
     position: relative;
     margin-bottom: 100px;
-    text-align: center; /* Центрируем текст */
+    text-align: center;
 }
 
 .hero-content {
     flex: 1;
     z-index: 2;
-    max-width: 800px; /* Ограничиваем ширину для лучшего чтения */
+    max-width: 800px;
 }
 
 .hero-title {
@@ -60,9 +58,19 @@ body {
 
 .title-line {
     display: block;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
 }
 
-/* Увеличенная надпись COSMOS */
+.title-line:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.title-line:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
 .logo-main.large {
     background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
     -webkit-background-clip: text;
@@ -70,20 +78,25 @@ body {
     -webkit-text-fill-color: transparent;
     font-weight: 700;
     display: block;
-    margin-top: 20px;
-    font-size: clamp(3rem, 8vw, 6rem); /* Увеличиваем размер */
-    letter-spacing: 4px; /* Добавляем больше пространства между буквами */
+    margin-bottom: 20px;
+    font-size: clamp(3rem, 8vw, 6rem);
+    letter-spacing: 4px;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInScale 1s ease 0.1s forwards;
 }
 
 .hero-subtitle {
-    font-size: 1.3rem; /* Немного увеличили подзаголовок */
+    font-size: 1.3rem;
     color: #ccc;
     max-width: 600px;
     line-height: 1.6;
-    margin: 0 auto; /* Центрируем подзаголовок */
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease 0.9s forwards;
 }
 
-/* Mirror Cards */
 .mirror-card {
     background: rgba(42, 42, 42, 0.3);
     backdrop-filter: blur(15px);
@@ -97,6 +110,8 @@ body {
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .mirror-card::before {
@@ -131,6 +146,8 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transform: translateX(-30px);
 }
 
 .mirror-card p {
@@ -138,13 +155,35 @@ body {
     line-height: 1.8;
     margin-bottom: 20px;
     color: #e0e0e0;
+    opacity: 0;
+    transform: translateX(-20px);
 }
 
-/* Responsive */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 @media (max-width: 768px) {
     .hero {
         height: auto;
-        padding: 80px 0; /* Увеличили отступы для мобильных */
+        padding: 80px 0;
     }
     
     .mirror-card {
@@ -156,6 +195,6 @@ body {
     }
     
     .logo-main.large {
-        font-size: clamp(2.5rem, 10vw, 4rem); /* Адаптивный размер для мобильных */
+        font-size: clamp(2.5rem, 10vw, 4rem);
     }
-    }
+}
