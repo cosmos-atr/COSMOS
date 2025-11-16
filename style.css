@@ -27,6 +27,59 @@ body {
     padding: 0 20px;
 }
 
+/* ---------- Навигация ---------- */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.nav-logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    opacity: 0.85;
+    font-size: 1rem;
+    transition: 0.25s;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+.nav-button {
+    padding: 8px 18px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* ---------- Hero ---------- */
+
 .header {
     padding: 30px 0;
     position: relative;
@@ -97,15 +150,16 @@ body {
     animation: fadeInUp 0.8s ease 0.9s forwards;
 }
 
+/* ---------- Glass Cards ---------- */
+
 .mirror-card {
     background: rgba(42, 42, 42, 0.3);
     backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     padding: 40px;
     margin-bottom: 50px;
-    box-shadow: 
+    box-shadow:
         0 8px 32px rgba(0, 0, 0, 0.4),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
     position: relative;
@@ -115,7 +169,7 @@ body {
 }
 
 .mirror-card::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -100%;
@@ -159,6 +213,8 @@ body {
     transform: translateX(-20px);
 }
 
+/* ---------- Анимации ---------- */
+
 @keyframes fadeInUp {
     to {
         opacity: 1;
@@ -173,28 +229,26 @@ body {
     }
 }
 
-@keyframes fadeInLeft {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
 @media (max-width: 768px) {
     .hero {
         height: auto;
         padding: 80px 0;
     }
-    
+
     .mirror-card {
         padding: 30px 20px;
     }
-    
+
     .mirror-card.large {
         padding: 40px 25px;
     }
-    
+
     .logo-main.large {
         font-size: clamp(2.5rem, 10vw, 4rem);
     }
+
+    .nav-links {
+        display: none;
+    }
 }
+
