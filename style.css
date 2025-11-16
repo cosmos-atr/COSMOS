@@ -167,19 +167,6 @@ body {
     color: #e0e0e0;
 }
 
-/* Cursor Follower */
-.cursor-follower {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.1s;
-    mix-blend-mode: difference;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
     .hero {
@@ -204,4 +191,4 @@ body {
     .mirror-card.large {
         padding: 40px 25px;
     }
-}
+    }
