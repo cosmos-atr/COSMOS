@@ -7,44 +7,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
 
-        <!-- Навигация -->
-        <header class="header">
-            <nav class="nav">
-                <div class="nav-logo">COSMOS</div>
+    <header class="header">
+        <div class="container nav">
+            <div class="nav-logo">COSMOS</div>
 
-                <ul class="nav-links">
-                    <li><a href="#about">О нас</a></li>
-                    <li><a href="#members">Участники</a></li>
-                    <li><a href="#events">События</a></li>
-                </ul>
+            <nav class="nav-links">
+                <a href="#home">Главная</a>
+                <a href="#about">О нас</a>
+                <a href="#contacts">Контакты</a>
             </nav>
-        </header>
+        </div>
+    </header>
 
-        <!-- Hero -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="logo-main large">COSMOS</span>
-                    <span class="title-line">ТВОРЧЕСКОЕ</span>
-                    <span class="title-line">ОБЪЕДИНЕНИЕ</span>
-                </h1>
-                <p class="hero-subtitle">В поиске звёзд✨</p>
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="logo-main large">COSMOS</span>
+                <span class="title-line">ТВОРЧЕСКОЕ</span>
+                <span class="title-line">ОБЪЕДИНЕНИЕ</span>
+            </h1>
+            <p class="hero-subtitle">В поиске звёзд✨</p>
+        </div>
+    </section>
+
+    <!-- INFO -->
+    <section id="about" class="section">
+        <div class="mirror-card large">
+            <h2>ИНФОРМАЦИЯ</h2>
+            <p>COSMOS — объединение творческих личностей. Не важно кто вы — 2D/3D дизайнер, художник, программист или кто-то ещё.</p>
+            <p>Мы создаём работы, проводим события, конкурсы и просто общаемся друг с другом.</p>
+            <p>В нашем объединении есть разные группы участников: «NewStars», «Stars», «OldStars» и кураторы.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contacts" class="footer">
+        <div class="container footer-container">
+            <div class="footer-title">COSMOS</div>
+            <div class="footer-links">
+                <a href="mailto:example@mail.com">Email</a>
+                <a href="https://t.me/username" target="_blank">Telegram</a>
+                <a href="https://discord.gg/" target="_blank">Discord</a>
             </div>
-        </section>
-
-        <!-- About -->
-        <section id="about" class="section">
-            <div class="mirror-card large">
-                <h2>ИНФОРМАЦИЯ</h2>
-                <p>COSMOS — это объединение творческих личностей. Не важно кто вы — 2D или 3D дизайнер, художник, программист или кто-то ещё. Мы всем рады в нашем объединении!</p>
-                <p>Мы создаём творческие работы, проводим конкурсы, раздачи, организуем события и просто общаемся друг с другом.</p>
-                <p>Наше объединение разделено на несколько видов участников: «NewStars», «Stars», «OldStars», и конечно, наши кураторы!</p>
-            </div>
-        </section>
-
-    </div>
+            <p class="footer-copy">© 2025 COSMOS</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
