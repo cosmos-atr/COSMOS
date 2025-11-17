@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>COSMOS | Главная</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -11,17 +11,17 @@
     <div class="container header-row">
       <a class="brand glow" href="index.html">COSMOS</a>
 
-      <button id="burger" class="burger" aria-label="Открыть меню" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav id="main-nav" class="nav">
-        <ul>
+      <nav class="nav">
+        <ul class="nav-list">
           <li><a href="index.html">Главная</a></li>
           <li><a href="socials.html">Соцсети</a></li>
           <li><a href="curators.html">Кураторы</a></li>
         </ul>
       </nav>
+
+      <button class="burger" data-target="mobile-panel" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
@@ -42,7 +42,7 @@
     <section id="about" class="section">
       <div class="container">
         <article class="info-card">
-          <h2>ИНФОРМАЦИЯ</h2>
+          <h2 class="info-title">ИНФОРМАЦИЯ</h2>
           <p>COSMOS — объединение творческих личностей. Не важно кто вы — 2D/3D дизайнер, художник, программист или кто-то ещё. Мы всем рады!</p>
           <p>Мы создаём работы, проводим конкурсы, раздачи, организуем события и просто общаемся друг с другом.</p>
           <p>В объединении есть группы: «NewStars», «Stars», «OldStars» и кураторы.</p>
@@ -63,8 +63,8 @@
     </div>
   </footer>
 
+  <!-- MOBILE PANEL (shared) -->
   <div id="mobile-panel" class="mobile-panel" aria-hidden="true">
-    <!-- Liquid glass panel for mobile menu -->
     <nav class="mobile-nav">
       <ul>
         <li><a href="index.html">Главная</a></li>
@@ -77,3 +77,4 @@
   <script src="script.js" defer></script>
 </body>
 </html>
+
