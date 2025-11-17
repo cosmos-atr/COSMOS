@@ -1,63 +1,79 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COSMOS | Творческое объединение</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>COSMOS | Главная</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="header">
+    <div class="container header-row">
+      <a class="brand glow" href="index.html">COSMOS</a>
 
-<header class="header">
-    <div class="container nav">
-        <div class="nav-logo">COSMOS</div>
+      <button id="burger" class="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
 
-        <button class="burger" id="burger">
-            <span></span><span></span><span></span>
-        </button>
-
-        <nav class="nav-links" id="nav-links">
-            <a href="#home">Главная</a>
-            <a href="#about">О нас</a>
-            <a href="#contacts">Контакты</a>
-        </nav>
+      <nav id="main-nav" class="nav">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="socials.html">Соцсети</a></li>
+          <li><a href="curators.html">Кураторы</a></li>
+        </ul>
+      </nav>
     </div>
-</header>
+  </header>
 
-<section id="home" class="hero">
-    <div class="hero-content">
-        <h1 class="hero-title">
-            <span class="logo-main large">COSMOS</span>
-            <span class="title-line">ТВОРЧЕСКОЕ</span>
-            <span class="title-line">ОБЪЕДЕДИНЕНИЕ</span>
-        </h1>
-        <p class="hero-subtitle">В поиске звёзд✨</p>
-    </div>
-</section>
-
-<section id="about" class="section">
-    <div class="mirror-card large">
-        <h2>ИНФОРМАЦИЯ</h2>
-        <p>COSMOS — объединение творческих личностей. Не важно кто вы — 2D/3D дизайнер, художник, программист и т.д.</p>
-        <p>Мы создаём работы, проводим события, конкурсы и просто общаемся друг с другом.</p>
-        <p>Существуют группы участников: «NewStars», «Stars», «OldStars» и кураторы.</p>
-    </div>
-</section>
-
-<footer id="contacts" class="footer">
-    <div class="container footer-container">
-        <div class="footer-title">COSMOS</div>
-
-        <div class="footer-links">
-            <a href="mailto:cosmosartlab@gmail.com">📧 Email</a>
-            <a href="https://t.me/cosmos_creativelab" target="_blank">📨 Telegram</a>
-            <a href="https://discord.gg/nzTUJ3dRk" target="_blank">💬 Discord</a>
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h1 class="hero-title">
+            <span class="logo-main glow">COSMOS</span>
+            <span class="hero-line">ТВОРЧЕСКОЕ</span>
+            <span class="hero-line">ОБЪЕДИНЕНИЕ</span>
+          </h1>
+          <p class="hero-sub">В поиске звёзд ✨</p>
         </div>
+      </div>
+    </section>
 
-        <p class="footer-copy">© 2025 COSMOS</p>
+    <section id="about" class="section">
+      <div class="container">
+        <article class="info-card">
+          <h2>ИНФОРМАЦИЯ</h2>
+          <p>COSMOS — объединение творческих личностей. Не важно кто вы — 2D/3D дизайнер, художник, программист или кто-то ещё. Мы всем рады!</p>
+          <p>Мы создаём работы, проводим конкурсы, раздачи, организуем события и просто общаемся друг с другом.</p>
+          <p>В объединении есть группы: «NewStars», «Stars», «OldStars» и кураторы.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">COSMOS</div>
+      <div class="footer-smalllinks">
+        <a href="socials.html">Email</a>
+        <a href="socials.html">Telegram</a>
+        <a href="socials.html">Discord</a>
+      </div>
+      <div class="footer-copy">© 2025 COSMOS</div>
     </div>
-</footer>
+  </footer>
 
-<script src="script.js"></script>
+  <div id="mobile-panel" class="mobile-panel" aria-hidden="true">
+    <!-- Liquid glass panel for mobile menu -->
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="socials.html">Соцсети</a></li>
+        <li><a href="curators.html">Кураторы</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
